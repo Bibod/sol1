@@ -3,29 +3,55 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace sol1
+
+namespace sol2
 {
-    class Program
+    internal class Program
     {
         static void Main(string[] args)
         {
-            float a, b, x;
-            Console.WriteLine("Intruduceti a =");
+            float a, b, c, dt;
+            double x1, x2;
+            Console.WriteLine("Introduceti a =");
             a = float.Parse(Console.ReadLine());
-            Console.WriteLine("Introduceti b =");
+            Console.WriteLine("Introduceti b = ");
             b = float.Parse(Console.ReadLine());
+            Console.WriteLine("Introduceti c =");
+            c = float.Parse(Console.ReadLine());
             if (a == 0)
                 if (b == 0)
-                    Console.WriteLine("Ecuatie nedeterminata ");
+                    if (c == 0)
+                        Console.WriteLine("Ecuatie nedeterminata");
+                    else Console.WriteLine("ecuatie indisponibila");
                 else
-                    Console.WriteLine("Ecuatie indisponibila");
+                {
+                    x1 = -c / b;
+                    Console.WriteLine("ecuatie de gradul I cu x1 = {0}", x1);
+
+                }
             else
             {
-                x = -b / a;
-                Console.WriteLine("solutia este x ={0} ", x);
+                dt = b*b -4 * a * c;
+                if (dt < 0)
+                    Console.WriteLine("Ecuatia are solutii complexe");
+                else
+                {
+                    if (dt == 0)
+                    {
+                        x1 = x2 = - b / (2 * a);
+                        Console.WriteLine("x1 = x2 = {0}", x1);
 
+                    }
+                    else 
+                    {
+                        x1 = (-b + Math.Sqrt(dt)) / (2 * a);
+                        x2 = (-b + Math.Sqrt(dt)) / (2 * a);
+                        Console.WriteLine("solutiile sunt x1 = {0}, x2 ={0} ");
+                    }
+                }
             }
-            Console.ReadKey();  
+
+            Console.ReadLine();
         }
     }
 }
