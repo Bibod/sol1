@@ -1,0 +1,32 @@
+using System;
+
+namespace nrinversate
+{
+    class Program
+    {
+        public int inversc(int a)
+        {
+            int uc, inv;
+            inv = 0;
+
+            while (a != 0)
+            {
+                uc = a % 10;
+                inv = inv * 10 + uc;
+                a = a / 10;
+            }
+            return inv;
+
+        }
+        static void Main(string[] args)
+        {
+            int x;
+            Console.WriteLine("introduceti numarul");
+            x = int.Parse(Console.ReadLine());
+
+            var t = new Program();
+            Console.WriteLine(" numarul inversat este {0} ", t.inversc(x));
+
+        }
+    }
+}
