@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Exercise15
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+          
+            int number;
+            bool prime = true;
+            int i = 2;
+            number = int.Parse(Console.ReadLine());
+
+            while (i <= number/2)
+            {
+                if (number % i == 0)
+                    prime = false;
+                i += 1;
+            }
+            if (prime)
+                Console.WriteLine("Numarul {0} este prim", number);
+            else
+                Console.WriteLine("Numarul {0} nu este prim", number);
+
+            Console.Read();
+
+        }
+    }
+}
