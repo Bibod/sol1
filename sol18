@@ -1,0 +1,33 @@
+using System;
+
+namespace _20
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Introduceti numarul natural");
+            int n = int.Parse(Console.ReadLine());
+            int m, p;
+            m = n;
+            for (int divizor = 2; divizor <= n / 2; divizor++)
+
+            {
+                if (m % divizor == 0)
+                {
+                    p = 0;
+                    while (m % divizor == 0)
+                    {
+                        p++;
+                        m /= divizor;
+                    }
+                    Console.Write("{0}^{1}*", divizor, p);
+                }
+                if (m == 1)
+                    break;
+            }
+            Console.WriteLine("1");
+            Console.ReadLine();
+        }
+    }
+}
