@@ -1,0 +1,24 @@
+using System;
+
+namespace Exercise13
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int firstNumber, secondNumber;
+
+            Console.Write("Primul numar = ");
+            firstNumber = int.Parse(Console.ReadLine());
+
+            Console.Write("Al doilea numar = ");
+            secondNumber = int.Parse(Console.ReadLine());
+
+            for (int i = Math.Min(firstNumber, secondNumber); i >= 2; i--)
+                if (firstNumber % i == 0 && secondNumber % i == 0)
+                    Console.WriteLine("Divizorii comuni sunt: " +i);
+
+            Console.ReadLine();
+        }
+    }
+}
