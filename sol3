@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Security;
+using System.Text;
+
+namespace sol3
+{
+    class sol3
+    {
+
+        private static void Main(string[] args)
+        {
+            int n;
+            int k;
+            Console.WriteLine("Scrieti numaru n:");
+            n = int.Parse(Console.ReadLine());
+            Console.WriteLine("Scrieti numaru k:");
+            k = int.Parse(Console.ReadLine());
+
+            if (n % k == 0)
+            {
+                Console.WriteLine("n divide k");
+            }
+            else
+            {
+                Console.WriteLine("n nu divide k");
+            }
+
+
+        }
+    }
+}
