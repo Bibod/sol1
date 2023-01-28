@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace sol17
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int a, b, r;
+            Console.WriteLine("introduceti valoarea lui a");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("introduceti valoarea lui b");
+            b = Convert.ToInt32(Console.ReadLine());
+
+
+            Console.ReadLine();
+
+            while (b > 0  )
+            {
+                r = a % b;
+                a = b;
+                b = r;
+               
+            }
+            Console.WriteLine($" cel mai mare divizor comun este {a} " );
+            Console.ReadKey();
+        }
+    }
+}
