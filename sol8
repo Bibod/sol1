@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace sol7
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a, b;
+            a = 0;
+            b = 0;
+            Console.WriteLine("Introduceti numarul a");
+            a = int.Parse(Console.ReadLine());
+            Console.WriteLine("Introduceti numarul b");
+            b = int.Parse(Console.ReadLine());
+            if(a != b)
+            {
+                (a, b)=(b, a);
+                Console.WriteLine($"{a} {b} ");
+            }
+            else
+            {
+                Console.WriteLine("a si b sunt la fel ");
+            }
+
+        }
+    }
+}
