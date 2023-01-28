@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace sol5._2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int number, k;
+            Console.WriteLine("introduceti numarul ");
+            number = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("introduceti k");
+            k = Convert.ToInt32(Console.ReadLine());
+            
+            int digit = (int)(number % (int)Math.Pow(10, k) / Math.Pow(10, k-1));
+            Console.WriteLine($"al {k} numar de la sfarsitul lui {number} este {digit}");
+        }
+    }
+}
